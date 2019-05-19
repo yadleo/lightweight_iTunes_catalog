@@ -1,13 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const { routes } = require('./routes');
+const { router } = require('./router');
 
 const app = express();
 
 // middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-// app.use(routes);
+// app.use(router);
 
 module.exports = { app };
