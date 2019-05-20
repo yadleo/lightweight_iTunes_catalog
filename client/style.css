@@ -60,3 +60,36 @@
 	text-align: center;
 }
 
+.Favorites__favorites__1ToAY h2 {
+	font-size: 3rem;
+	text-transform: uppercase;
+	padding: 1rem;
+	border-bottom: 2px solid black;
+}
+
+.Favorites__favorites__1ToAY section {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+.FavoriteEntry__section-entry__1qqmR {
+	font-size: 2rem;
+	border: 1px solid lightgrey;
+	margin: 5px;
+	padding: 2.5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.FavoriteEntry__entry-artwork__3YgV4 {
+	width: 10rem;
+	height: auto;
+}
+
+.FavoriteEntry__entry-descr__xHPYa {
+	text-align: center;
+}
+
