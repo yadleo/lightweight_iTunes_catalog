@@ -4,13 +4,19 @@ import styles from './Favorites.css';
 import FavoriteEntry from './FavoriteEntry/FavoriteEntry';
 
 const Favorites = props => {
-	const favorites = props.favorites;
+	const { favorites, handleFavoriteEvents } = props;
+	const favIds = Object.keys(favorites);
+
 	return (
 		<div styleName="favorites">
-			<h2>Favorites&#40;{favorites.length}&#41;&#58;</h2>
+			<h2>Favorites&#40;{favIds.length}&#41;&#58;</h2>
 			<section>
-				{favorites.map(entry => (
-					<FavoriteEntry key={entry.id} entry={entry} />
+				{favIds.map(id => (
+					<FavoriteEntry
+						key={id}
+						entry={favorites[id]}
+						handleFavoriteEvents={handleFavoriteEvents}
+					/>
 				))}
 			</section>
 		</div>

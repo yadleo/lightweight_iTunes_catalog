@@ -4,7 +4,7 @@ import styles from './SearchResults.css';
 import SearchResultsSection from './SearchResultsSection/SearchResultsSection';
 
 const SearchResults = props => {
-	const itunesSearchResult = props.itunesSearchResult;
+	const { itunesSearchResult, handleFavoriteEvents } = props;
 	let sections = Object.keys(itunesSearchResult);
 
 	return (
@@ -15,6 +15,7 @@ const SearchResults = props => {
 					key={idx}
 					section={section}
 					entries={itunesSearchResult[section]}
+					handleFavoriteEvents={handleFavoriteEvents}
 				/>
 			))}
 		</div>

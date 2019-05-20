@@ -9,7 +9,11 @@ const SearchResultsSection = props => {
 			<h3 styleName="mediatype">{props.section}&#58;</h3>
 			<div styleName="mediatype-section">
 				{props.entries.map(entry => (
-					<SearchResultsSectionEntry key={entry.id} entry={entry} />
+					<SearchResultsSectionEntry
+						key={entry.id}
+						entry={entry}
+						handleFavoriteEvents={props.handleFavoriteEvents}
+					/>
 				))}
 			</div>
 		</React.Fragment>

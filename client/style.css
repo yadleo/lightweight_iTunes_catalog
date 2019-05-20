@@ -56,6 +56,10 @@
 	justify-content: center;
 	align-items: center;
 }
+.SearchResultsSectionEntry__section-entry__CeIhr button {
+	border: 1px solid black;
+	border-radius: 4px;
+}
 
 .SearchResultsSectionEntry__entry-artwork__33A2a {
 	width: 10rem;
@@ -90,6 +94,11 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+
+.FavoriteEntry__section-entry__1qqmR button {
+	border: 1px solid black;
+	border-radius: 4px;
 }
 
 .FavoriteEntry__entry-artwork__3YgV4 {
