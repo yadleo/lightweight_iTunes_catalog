@@ -3,6 +3,11 @@
 	background-color: white;
 }
 
+.App__app__3l6tU main {
+	display: flex;
+	justify-content: space-evenly;
+}
+
 .Nav__navigation__ZArQU {
 	padding: 2rem;
 	display: flex;
@@ -19,6 +24,7 @@
 }
 
 .SearchResults__searchResults__1QwVH {
+	margin: 1rem;
 	font-size: 4rem;
 }
 
@@ -30,8 +36,8 @@
 .SearchResultsSection__mediatype__187Cu {
 	font-size: 3rem;
 	text-transform: uppercase;
+	text-decoration-line: underline;
 	padding: 1rem;
-	border-bottom: 2px solid black;
 }
 
 .SearchResultsSection__mediatype-section__1Ry5N {
@@ -60,9 +66,11 @@
 	text-align: center;
 }
 
+.Favorites__favorites__1ToAY {
+	margin: 1rem;
+}
 .Favorites__favorites__1ToAY h2 {
-	font-size: 3rem;
-	text-transform: uppercase;
+	font-size: 4rem;
 	padding: 1rem;
 	border-bottom: 2px solid black;
 }
