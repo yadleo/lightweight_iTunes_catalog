@@ -13,8 +13,10 @@ const sortByMediaType = function(results) {
 	let sortedResults = {};
 	results.forEach(entry => {
 		let type = entry.kind;
-		sortedResults[type] = sortedResults[type] || [];
-		sortedResults[type].push(filterEntry(entry));
+		if (type) {
+			sortedResults[type] = sortedResults[type] || [];
+			sortedResults[type].push(filterEntry(entry));
+		}
 	});
 	return sortedResults;
 };
