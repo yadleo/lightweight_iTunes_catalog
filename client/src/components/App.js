@@ -9,7 +9,8 @@ import Favorites from './Favorites/Favorites';
 class App extends Component {
 	state = {
 		itunesSearchResult: {},
-		favorites: {}
+		favorites: {},
+		uuid: '95e6bfdb-cbee-41e1-b522-e6633ef60bdb'
 	};
 
 	getItunesSearchResult = term => {
@@ -35,6 +36,16 @@ class App extends Component {
 			this.setState({ favorites });
 		}
 	};
+
+	componentDidMount() {
+		const localStorageRef = localStorage.getItem(this.state.uuid);
+		if (localStorageRef)
+			this.setState({ favorites: JSON.parse(localStorageRef) });
+	}
+
+	componentDidUpdate() {
+		localStorage.setItem(this.state.uuid, JSON.stringify(this.state.favorites));
+	}
 
 	render() {
 		return (

@@ -4,9 +4,9 @@ import styles from './SearchResultsSectionEntry.css';
 
 class SearchResultsSectionEntry extends Component {
 	handleClick = e => {
-		console.log('fav');
 		this.props.handleFavoriteEvents(this.props.entry, 'ADD');
 	};
+
 	render() {
 		const { id, name, artwork, genre, url } = this.props.entry;
 		return (
