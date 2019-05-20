@@ -1,4 +1,5 @@
 const axios = require('axios');
+const helpers = require('./helpers');
 
 module.exports = {
 	read: function(req, res) {
@@ -6,8 +7,9 @@ module.exports = {
 
 		axios
 			.get(`https://itunes.apple.com/search?term=${term}`)
-			.then(data => {
-				res.status(200).send(data.data);
+			.then(result => {
+				const sortedResults = helpers.sortByMediaType(result.data.results);
+				res.status(200).send(sortedResults);
 			})
 			.catch(err => {
 				if (err.response) {
