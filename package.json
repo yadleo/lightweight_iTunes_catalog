@@ -1,19 +1,25 @@
 {
-  "name": "lightweight_itunes_catalog",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yadleo/lightweight_iTunes_catalog.git"
-  },
-  "author": "Daniel Lai",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/yadleo/lightweight_iTunes_catalog/issues"
-  },
-  "homepage": "https://github.com/yadleo/lightweight_iTunes_catalog#readme"
+	"name": "lightweight_itunes_catalog",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "run-p start:server start:client",
+		"start:server": "npm run start --prefix server",
+		"start:client": "npm run start --prefix client",
+		"build:cli": "cd client && npm run webpack"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/yadleo/lightweight_iTunes_catalog.git"
+	},
+	"author": "Daniel Lai",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/yadleo/lightweight_iTunes_catalog/issues"
+	},
+	"homepage": "https://github.com/yadleo/lightweight_iTunes_catalog#readme",
+	"devDependencies": {
+		"npm-run-all": "^4.1.5"
+	}
 }
