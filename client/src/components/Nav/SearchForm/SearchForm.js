@@ -9,12 +9,10 @@ class SearchForm extends Component {
 
 	handleInputChange = e => {
 		this.setState({ [e.target.name]: e.target.value });
-		console.log(this.state.catalogSearchTerms);
 	};
 
 	handleSubmit = e => {
 		e.preventDefault();
-		console.log('handleSubmit', this.state.catalogSearchTerms);
 		this.props.getItunesSearchResult(this.state.catalogSearchTerms);
 	};
 

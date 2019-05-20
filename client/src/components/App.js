@@ -3,6 +3,7 @@ import axios from 'axios';
 import CssModules from 'react-css-modules';
 import styles from './App.css';
 import Nav from './Nav/Nav';
+import SearchResults from './SearchResults/SearchResults';
 
 class App extends Component {
 	state = {
@@ -16,7 +17,7 @@ class App extends Component {
 				console.log(res.data);
 				this.setState({ itunesSearchResult: res.data });
 			})
-			.catch(err => console.log(err));
+			.catch(err => window.alert(err));
 	};
 
 	render() {
@@ -24,7 +25,9 @@ class App extends Component {
 			<div styleName="app">
 				<Nav getItunesSearchResult={this.getItunesSearchResult} />
 				THIS IS THE CLIENT SIDE
-				<main />
+				<main>
+					<SearchResults itunesSearchResult={this.state.itunesSearchResult} />
+				</main>
 				<footer>
 					<a href="https://icons8.com/icon/63304/itunes">
 						iTunes icon by Icons8
