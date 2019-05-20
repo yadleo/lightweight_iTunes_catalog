@@ -1,0 +1,12 @@
+.mediatype {
+	font-size: 3rem;
+	text-transform: uppercase;
+	padding: 1rem;
+	border-bottom: 2px solid black;
+}
+
+.mediatype-section {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}

@@ -24,7 +24,6 @@ class App extends Component {
 		return (
 			<div styleName="app">
 				<Nav getItunesSearchResult={this.getItunesSearchResult} />
-				THIS IS THE CLIENT SIDE
 				<main>
 					<SearchResults itunesSearchResult={this.state.itunesSearchResult} />
 				</main>

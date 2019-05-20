@@ -5,12 +5,14 @@ import SearchResultsSectionEntry from './SearchResultsSectionsEntries/SearchResu
 
 const SearchResultsSection = props => {
 	return (
-		<div>
-			<h3>{props.section}&#58;</h3>
-			{props.entries.map(entry => (
-				<SearchResultsSectionEntry key={entry.id} entry={entry} />
-			))}
-		</div>
+		<React.Fragment>
+			<h3 styleName="mediatype">{props.section}&#58;</h3>
+			<div styleName="mediatype-section">
+				{props.entries.map(entry => (
+					<SearchResultsSectionEntry key={entry.id} entry={entry} />
+				))}
+			</div>
+		</React.Fragment>
 	);
 };
 

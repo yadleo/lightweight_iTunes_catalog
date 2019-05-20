@@ -1,0 +1,19 @@
+.section-entry {
+	font-size: 2rem;
+	border: 1px solid lightgrey;
+	margin: 5px;
+	padding: 2.5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.entry-artwork {
+	width: 10rem;
+	height: auto;
+}
+
+.entry-descr {
+	text-align: center;
+}

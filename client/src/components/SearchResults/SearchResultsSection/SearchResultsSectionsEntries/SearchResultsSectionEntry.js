@@ -5,11 +5,16 @@ import styles from './SearchResultsSectionEntry.css';
 const SearchResultsSectionEntry = props => {
 	const { id, name, artwork, genre, url } = props.entry;
 	return (
-		<div>
-			<img src={artwork} alt={name} />
-			<h4>This is the name: {name}</h4>
-			<h4>This is the genre: {genre}</h4>
-			<h4>This is the url: {url}</h4>
+		<div styleName="section-entry">
+			<img styleName="entry-artwork" src={artwork} alt={name} />
+			<div styleName="entry-descr">
+				<div>
+					{name}&nbsp;&ndash;&nbsp;{genre}
+				</div>
+				<a href={url} target="blank">
+					view on iTunes
+				</a>
+			</div>
 		</div>
 	);
 };

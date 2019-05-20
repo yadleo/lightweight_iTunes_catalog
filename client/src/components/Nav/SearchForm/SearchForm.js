@@ -14,6 +14,7 @@ class SearchForm extends Component {
 	handleSubmit = e => {
 		e.preventDefault();
 		this.props.getItunesSearchResult(this.state.catalogSearchTerms);
+		e.target.reset();
 	};
 
 	render() {
@@ -21,6 +22,7 @@ class SearchForm extends Component {
 			<form onSubmit={this.handleSubmit}>
 				<label htmlFor="catalogSearchTerms">
 					<input
+						styleName="search-input"
 						type="text"
 						name="catalogSearchTerms"
 						id="catalogSearchTerms"

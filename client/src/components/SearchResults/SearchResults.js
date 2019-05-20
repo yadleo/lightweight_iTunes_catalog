@@ -8,8 +8,8 @@ const SearchResults = props => {
 	let sections = Object.keys(itunesSearchResult);
 
 	return (
-		<div>
-			<h2>Search Results by Media Type&#58;</h2>
+		<div styleName="searchResults">
+			<h2>Search Results&#58;</h2>
 			{sections.map((section, idx) => (
 				<SearchResultsSection
 					key={idx}

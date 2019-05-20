@@ -1,6 +1,6 @@
 .navigation {
 	padding: 2rem;
 	display: flex;
-	/* background-color: white;
-	color: white; */
+	justify-content: space-evenly;
+	align-items: center;
 }
